@@ -1,0 +1,16 @@
+<body>
+  {{#each blog as |blog|}}
+  <link rel="stylesheet" href="css/home.css">
+<div class="container mainC">
+      <div class="cHeader row">
+        <div class='cTitle '>{{blog.title}}</div>
+        <div class='cPost'>posted by {{blog.user.user_name}} on 5/28/21</div>
+      </div>
+      <dd class="txtCont" id=''>{{blog.txtContent}} </dd>
+    </div>
+
+ {{/each}}
+
+
+
+</body>

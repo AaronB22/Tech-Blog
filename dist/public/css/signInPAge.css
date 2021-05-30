@@ -1,0 +1,21 @@
+.outerMainDiv{
+   
+}
+.innerMainDiv{
+
+}
+
+.signInHeader{
+    text-align: center;
+    font-style: italic;
+    font-size: 6rem;
+}
+
+.emailLab{
+    font-style: italic;
+    font-weight: 800;
+}
+.email{
+    width: 800px;
+    height: 200px;
+}

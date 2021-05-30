@@ -1,0 +1,30 @@
+.custNav{
+  
+    background-color:hsla(19, 94%, 43%, 0.705) ;
+}
+
+.cHeader{
+    width: 75rem;
+    background: gray;
+}
+.cTitle{
+    font-weight: bolder;
+    font-size: 40px;
+    width: 60%;
+}
+.cPost{
+    margin-top:1rem ;
+    font-size: 25px;
+    font-style: italic;
+    position: relative;
+    
+}
+
+.txtCont{
+    position: relative;
+    right: 1rem;
+    width: 75rem;
+    border-right: grey 5px solid;
+    border-left: grey 5px solid;
+    border-bottom: grey 5px solid;
+}

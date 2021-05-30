@@ -1,0 +1,31 @@
+.outerMainDiv{
+    width: 1500px;
+    height: 800px;
+    background-color: hsl(31, 59%, 16%);
+    margin-top: 50px;
+    border-radius: 15%;
+}
+.innerMainDiv{
+    border-radius: 15%;
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    top: 10%;
+    margin-top: auto;
+    background-color: hsl(32, 98%, 62%);
+}
+
+.signInHeader{
+    text-align: center;
+    font-style: italic;
+    font-size: 6rem;
+}
+
+.emailLab{
+    font-style: italic;
+    font-weight: 800;
+}
+.email{
+    width: 800px;
+    height: 200px;
+}
