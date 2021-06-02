@@ -1,10 +1,22 @@
 <body>
   <link rel="stylesheet" href="css/signInPAge.css">
   <link rel='stylesheet' href='css/main'>
-  <div class="outerMainDiv container">
+<div class="outerMainDiv container">
         <div class="innerMainDiv container">
-            <h2 class="signInHeader">Sign In</h2>
+            <h2 class="signInHeader">Sign Up</h2>
          
+
+
+              <div class="userDiv">
+                <label for="email" class="emailLab">
+                  User Name
+                </label>
+              
+                  <input id="userName" name="userName" type="userName" class="form-control">
+            
+              </div>
+
+
             <div class="emailDiv">
                 <label for="email" class="emailLab">
                   Email address
@@ -20,17 +32,13 @@
                 
                   <input id="password" name="password" type="password" autocomplete="password" class="form-control">
                 
-
-                <div class="row">
-
-                  <button type='button' class="btn btn-secondary d-flex justify-content-start justify-content-around" style="width: 400px;" id="signIn">Sign In</button>
-                  <button type='button' class="btn btn-secondary  d-flex justify-content-around justify-content-end" style="width: 400px;" id="createAccount">Create an Account</button>
-                </div>
               </div>  
+            <button type="button" id='mainBtn' class="btn btn-dark">Create New Account!</button>
+
+
 
         </div>
-  </div>   
-   <script src='/js/loginFrontEnd.js'></script>
-   <script src='/js/navBar.js'></script>
-   
+   </div>   
+     <script src='/js/signUp.js'></script>
+     <script src='/js/navBar.js'></script>
 </body>

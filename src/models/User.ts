@@ -17,12 +17,16 @@ User.init({
         type: DataTypes.STRING,
         allowNull: false
     },
+    email:{
+        type: DataTypes.STRING,
+        allowNull: false
+    },
     password:{
         type: DataTypes.STRING,
         validate: {
             len: [8],
           },
-    },
+    }},
     {
         // hooks: {
         //     beforeCreate: async (newUserData) => {
@@ -35,7 +39,7 @@ User.init({
         freezeTableName: true,
         underscored: true,
         modelName: 'user',
-      }
-})
+      },
+)
 
 module.exports=User

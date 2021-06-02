@@ -18,9 +18,6 @@ routers.get('/', async (req, res) => {
             blog
         });
     }
-    finally { }
-    try {
-    }
     catch (err) {
         res.status(500).json(err);
     }

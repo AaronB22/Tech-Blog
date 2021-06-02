@@ -19,7 +19,7 @@ routers.get('/',async (req:Request, res:Response)=>{
             user,
             blog
         })
-    },
+    }
     catch(err){
         res.status(500).json(err)
     }
