@@ -11,9 +11,10 @@ routers.get('/',async (req:Request, res:Response)=>{
             ]
         })
         const getUsers= await User.findAll()
+        // console.log(getBlogs)
         const user:object= getUsers.map((users)=>users.get({plain:true}))
         const blog:object= getBlogs.map((blog)=>blog.get({plain:true}))
-        
+        console.log(blog.datePosted)
         
         res.render('home',{
             user,

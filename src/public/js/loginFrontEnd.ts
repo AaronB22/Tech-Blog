@@ -1,21 +1,23 @@
 
-const signIn= async()=>{
+const signIn= async ()=>{
     const email:string = document.querySelector('#email').value.trim();
     const password:string = document.querySelector('#password').value.trim();
     console.log(JSON.stringify({email, password}))
-    const response= fetch('/logIn/login',{
+    const response= await fetch('/logIn/login',{
         method:'POST',
         body: JSON.stringify({email, password}),
         headers: { 'Content-Type': 'application/json' },
     })
+    console.log(response)
     if(response.ok){
         console.log('loggedIn')
+        document.location.replace('/')
     }
 }
 
 
 const createAccount= ()=>{
-    console.log('otherTest')
+    document.location.replace('/login/signUp')
 }
 
 

@@ -1,0 +1,86 @@
+
+<body>
+    <style>
+        .custNav{
+  
+    background-color:hsl(189, 100%, 53%) ;
+}
+
+.cHeader{
+    width: 60rem;
+    background: gray;
+}
+.cTitle{
+    font-weight: bolder;
+    font-size: 40px;
+    width: 60%;
+}
+.cPost{
+    
+    margin-top:1rem ;
+    font-size: 25px;
+    font-style: italic;
+    position: relative;
+    
+}
+
+.txtCont{
+    position: relative;
+    right: 1rem;
+    width: 60rem;
+    border-right: grey 5px solid;
+    border-left: grey 5px solid;
+    border-bottom: grey 5px solid;
+}
+.mainC{
+margin-left: auto;
+margin-right: auto;
+}
+.comment{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40rem;
+}
+.commentBtn{
+    width: 20rem;
+    margin-left: auto;
+    
+}
+.blogId{
+    display: none;
+}
+
+
+    </style>
+    <textarea class='blogId' id="BlogID">{{blog.id}}</textarea>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div class="container mainC">
+      <div class="cHeader row">
+        <div class='cTitle '>{{blog.title}}</div>
+        <div class='cPost'>posted by {{blog.user.user_name}}</div>
+      </div>
+      <dd class="txtCont" id=''>{{blog.txtContent}} </dd>
+    </div>
+
+    <form>
+            <div class="form-group comment">
+                <textarea class="form-control" placeholder="Comment Here..."  id="newComment" rows="6"></textarea>
+             <button type='button' class="btn btn-secondary commentBtn" id="newCommentBtn">Submit</button>
+              </div>
+          </form>
+
+    {{#each comments as |comments|}}
+    <div class='comments'>
+        <div class="container ">
+      <div class="cHeader row">
+        
+        <div class='cPost'>posted by {{comments.user_name}}</div>
+      </div>    
+      <dd class="txtCont" id=''>{{comments.txtContent}} </dd>
+    </div>
+    {{/each}}
+
+    </div>
+    <script src='/js/navBar.js'></script>
+     <script src='/js/blogsFrontEnd.js'></script>
+</body>

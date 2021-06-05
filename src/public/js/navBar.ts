@@ -6,7 +6,7 @@ const homeLink=()=>{
 
 const dashLink=()=>{
     event.preventDefault();
-    document.location.replace('/')
+    document.location.replace('/dashboard')
 }
 
 const logInLink=()=>{
@@ -14,9 +14,14 @@ const logInLink=()=>{
     document.location.replace('/logIn')
 }
 
-const logOutLink=()=>{
+const logOutLink=async()=>{
     event.preventDefault();
-    document.location.replace('/')
+    const Response= await fetch('/login/logout')
+    
+    if (Response.ok){
+        console.log ('Logged Out')
+        document.location.replace('/')
+    }
 }
 
 document

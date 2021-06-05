@@ -1,0 +1,20 @@
+<body>
+    {{!-- <link rel="stylesheet" href="css/home.css"> --}}
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+     {{#each blog as |blog|}}
+  <link rel="stylesheet" href="css/home.css">
+<div class="container mainC">
+      <div class="cHeader row">
+        <div class='cTitle '>{{blog.title}}</div>
+        <div class='cPost'>posted by {{blog.user.user_name}}</div>
+      </div>
+      <dd class="txtCont" id=''>{{blog.txtContent}} </dd>
+    </div>
+
+ {{/each}}
+
+ {{!-- <button type='button' class="btn btn-secondary btn-lg container" id="newPostBTn">New Post</button> --}}
+ <script src='/js/navBar.js'></script>
+  <script src='/js/dashboard.js'></script>
+</body>
