@@ -9,7 +9,6 @@ const newComment = async () => {
         headers: { 'Content-Type': 'application/json' },
     });
     if (response.ok) {
-        console.log('Refreshing');
         window.location.reload();
     }
 };

@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 
 router.get('/:id', withAuth , async(req:Request, res:Response)=>{
-    console.log('YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY')
+    
  
     try{
         const getBlog= await Blog.findByPk(req.params.id,{
@@ -16,12 +16,12 @@ router.get('/:id', withAuth , async(req:Request, res:Response)=>{
             where:{blogs_id: req.params.id},})
         
             
-            console.log(getComments)
+          
             const comments:object= getComments.map((comments)=>comments.get({plain:true}))
             const blog = getBlog.get({plain :true})
        
           
-            console.log('halp')
+    
             res.render('blog', {
                 blog,
                 comments

@@ -3,7 +3,6 @@ const router = require('express').Router();
 const { User, Blog, Comments } = require('../models');
 const withAuth = require('../utils/auth');
 router.get('/:id', withAuth, async (req, res) => {
-    console.log('YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY');
     try {
         const getBlog = await Blog.findByPk(req.params.id, {
             include: [{
@@ -13,10 +12,8 @@ router.get('/:id', withAuth, async (req, res) => {
         const getComments = await Comments.findAll({
             where: { blogs_id: req.params.id },
         });
-        console.log(getComments);
         const comments = getComments.map((comments) => comments.get({ plain: true }));
         const blog = getBlog.get({ plain: true });
-        console.log('halp');
         res.render('blog', {
             blog,
             comments

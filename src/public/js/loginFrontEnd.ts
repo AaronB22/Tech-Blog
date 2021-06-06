@@ -10,7 +10,7 @@ const signIn= async ()=>{
     })
     console.log(response)
     if(response.ok){
-        console.log('loggedIn')
+       
         window.location.replace('/')
     }
 }

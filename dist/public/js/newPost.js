@@ -9,7 +9,6 @@ const newPost = async () => {
         headers: { 'Content-Type': 'application/json' },
     });
     if (response.ok) {
-        console.log('post Added');
         window.location.replace('/dashboard');
     }
 };

@@ -6,7 +6,7 @@ router.get('/newPost', withAuth, async (req:Request, res:Response)=>{
     res.render('newPost')
 })
 router.get('/',withAuth, async(req:Request, res:Response)=>{
-    console.log(req.session.user_id)
+    
    
     const getUser:object= await User.findByPk(req.session.user_id);
 
@@ -17,8 +17,7 @@ router.get('/',withAuth, async(req:Request, res:Response)=>{
     
     const blog:object= getBlog.map((blog)=>blog.get({plain:true}))
     const user:object = getUser.get({plain :true})
-    console.log(blog)
-    console.log(user)
+    
     
     res.render('dashboard',{
         user,
@@ -36,7 +35,7 @@ router.post('/new', async (req:Request, res:Response)=>{
 
 router.get('/delete/:id',async (req:Request, res:Response)=>{
     const deleteBlog= await Blog.findOne({where:{id:req.params.id}})
-    console.log(deleteBlog)
+
     await deleteBlog.destroy()
     res.redirect('/dashboard')
 })

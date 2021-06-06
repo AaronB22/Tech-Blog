@@ -10,7 +10,6 @@ const newPost = async()=>{
     })
 
     if(response.ok){
-        console.log('post Added')
         window.location.replace('/dashboard')
     }
 }
