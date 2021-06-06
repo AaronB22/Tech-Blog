@@ -1,5 +1,5 @@
 
-<body>
+<body style="background-color: hsla(0, 4%, 5%, 0.863);; color:white">
     <style>
         .custNav{
   
@@ -7,13 +7,14 @@
 }
 
 .cHeader{
-    width: 60rem;
-    background: gray;
+    width: 55rem;
+    background: hsla(189, 100%, 53%, 0.651)
 }
 .cTitle{
     font-weight: bolder;
     font-size: 40px;
     width: 60%;
+     color: black;
 }
 .cPost{
     
@@ -23,15 +24,16 @@
     position: relative;
     
 }
-
 .txtCont{
+    height: 10rem;
     position: relative;
     right: 1rem;
-    width: 60rem;
-    border-right: grey 5px solid;
-    border-left: grey 5px solid;
-    border-bottom: grey 5px solid;
+    width: 55rem;
+    border-right: hsla(189, 100%, 53%, 0.651) solid 5px;
+    border-left: hsla(189, 100%, 53%, 0.651) solid 5px;
+    border-bottom: hsla(189, 100%, 53%, 0.651) solid 5px;
 }
+
 .mainC{
 margin-left: auto;
 margin-right: auto;
@@ -49,10 +51,17 @@ margin-right: auto;
 .blogId{
     display: none;
 }
+.margin{
+    display: block;
+    margin-bottom: 40px;
+}
 
 
     </style>
+    
+    <a class='margin'></a>
     <textarea class='blogId' id="BlogID">{{blog.id}}</textarea>
+
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <div class="container mainC">
       <div class="cHeader row">
@@ -74,13 +83,14 @@ margin-right: auto;
         <div class="container ">
       <div class="cHeader row">
         
-        <div class='cPost'>posted by {{comments.user_name}}</div>
+        <div class='cPost'>{{comments.user_name}}</div>
       </div>    
       <dd class="txtCont" id=''>{{comments.txtContent}} </dd>
     </div>
     {{/each}}
 
     </div>
+
     <script src='/js/navBar.js'></script>
      <script src='/js/blogsFrontEnd.js'></script>
 </body>

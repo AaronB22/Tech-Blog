@@ -11,6 +11,7 @@ const createUser = async ()=>{
         })
         if (response.ok){
             console.log("NewUserCreated")
+            window.location.replace('/')
         }
     }
 }

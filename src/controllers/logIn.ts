@@ -10,7 +10,12 @@ router.get('/', async (req:Request, res:Response)=>{
 
 router.post('/login', async (req:Request, res:Response)=>{
     try {
-        
+        console.log( req.session.logged_in)
+        if ( req.session.logged_in===true){
+            console.log('already logged In!')
+            req.redirect('/dashboard')
+            return
+        }
         // console.log(req.body.email, req.body.password)
         
         const userInfo = await User.findOne({ where: 
@@ -60,7 +65,13 @@ router.post('/createUser', async (req:Request, res:Response)=>{
         console.log(req.body)
         const userData = await User.create(req.body);
         
-        res.status(200).json(userData)
+        req.session.save(()=>{
+            req.session.logged_in = true;
+            req.session.user_id = userData.id;
+            req.session.user_name= userData.user_name
+            console.log(req.session.user_id)
+            console.log(req.session.logged_in)
+            res.status(200).json(userData);
     }
     catch(err){
         res.status(500).json(err)

@@ -1,19 +1,25 @@
 <body>
-  {{#each blog as |blog|}}
+ 
+  <a class='margin'></a>
   <link rel="stylesheet" href="css/home.css">
+  {{#each blog as |blog|}}
+ 
 <div class="container mainC">
       <div class="cHeader row">
-        <div class='cTitle '>{{blog.title}}</div>
+      <a href="/blog/{{blog.id}}" target="_blank" class="cTitle">
+          <div class='cTitle '>{{blog.title}}</div>
+       </a>
+       <i class="fa fa-trash" aria-hidden="true"></i>
         <div class='cPost'>posted by {{blog.user.user_name}}</div>
+  
+                   
+                      
       </div>
       <dd class="txtCont" id=''>{{blog.txtContent}} </dd>
-      <a href="/blog/{{blog.id}}" target="_blank" class="">
-                   <span class="">Select</span>
-                        </a>
     </div>
-
  {{/each}}
 
+ 
 
 <script src='/js/navBar.js'></script>
 </body>

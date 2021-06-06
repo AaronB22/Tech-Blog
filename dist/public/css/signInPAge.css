@@ -1,8 +1,10 @@
-.outerMainDiv{
-   
+body{
+    background-color: hsla(0, 4%, 5%, 0.863);
+    color: white;
 }
-.innerMainDiv{
-
+.custNav{
+  
+    background-color:hsl(189, 100%, 53%) ;
 }
 
 .signInHeader{

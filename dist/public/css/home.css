@@ -1,3 +1,8 @@
+body{
+    background-color: hsla(0, 4%, 5%, 0.863);
+    color: white;
+}
+
 .custNav{
   
     background-color:hsl(189, 100%, 53%) ;
@@ -5,15 +10,16 @@
 
 .cHeader{
     width: 55rem;
-    background: gray;
+    background: hsla(189, 100%, 53%, 0.651)
 }
 .cTitle{
     font-weight: bolder;
     font-size: 40px;
     width: 60%;
+    color: black;
 }
 .cPost{
-    height: 12rem;
+  
     margin-top:1rem ;
     font-size: 25px;
     font-style: italic;
@@ -22,14 +28,27 @@
 }
 
 .txtCont{
+    height: 10rem;
     position: relative;
     right: 1rem;
     width: 55rem;
-    border-right: grey 5px solid;
-    border-left: grey 5px solid;
-    border-bottom: grey 5px solid;
+    border-right: hsla(189, 100%, 53%, 0.651) solid 5px;
+    border-left: hsla(189, 100%, 53%, 0.651) solid 5px;
+    border-bottom: hsla(189, 100%, 53%, 0.651) solid 5px;
 }
 .mainC{
 margin-left: auto;
 margin-right: auto;
+}
+.margin{
+    display: block;
+    margin-bottom: 40px;
+}
+.custBrn{
+    position: relative;
+    left: 100px;
+}
+.deletePost{
+    margin-left: 16rem;
+    margin-top: 1.5rem;
 }
